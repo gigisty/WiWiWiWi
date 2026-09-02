@@ -22,8 +22,20 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+    validar-html:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Obtener el código
+            uses: actions/checkout@v4
+    
+          - name: Validar archivos HTML
+            uses: CyboZu/html5validator-action@v1.5.0
+            with:
+              root: '.'
+
   # Single deploy job since we're just deploying
   deploy:
+    needs: validar-html  # Cancela el despliegue si la validación falla
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
