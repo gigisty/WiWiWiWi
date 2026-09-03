@@ -1,0 +1,71 @@
+
+ body {
+      font-family: 'Nunito','Segoe UI', sans-serif;
+      background-image: url("images/overlay.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("Images/bg.jpg");
+		  background-image: url("images/overlay.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("Images/bg.jpg");
+		  background-image: url("images/overlay.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("Images/bg.jpg");
+		  background-image: url("images/overlay.png"), linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("Images/bg.jpg");
+		  background-position: top left, bottom left, auto;
+		  background-size: auto, 100% 100%, cover;
+		  background-attachment: fixed;
+		  background-repeat: repeat, no-repeat, auto;
+		  position: relative;
+		  background-color: #150C07;
+		  line-height: 1.75em;
+		  overflow-x: hidden;
+		  overflow-y: auto;
+      margin: 0px;
+      padding: 10px;
+}
+
+.title-bar-text{
+  font-family: 'Nunito', 'Segoe UI', sans-serif;
+}
+
+#capoo {
+    position: fixed;
+  bottom: -5px;  /* Separa el GIF 10px del borde inferior */
+  left: -10px;    /* Separa el GIF 10px del borde izquierdo */
+  width: 150px;  /* Ajusta el ancho deseado */
+  z-index: 1000; /* Asegura que se muestre por encima de otros elementos */
+}
+
+/* 1. Ventanas que se pueden arrastrar */
+.window.draggable {
+    position: absolute;
+    width: 350px; /* CLAVE: Tener un ancho fijo inicial evita que se deforme al moverla */
+    height: auto; /* El alto lo dicta la imagen */
+}
+
+.window.draggable .title-bar {
+    cursor: move;
+    user-select: none;
+}
+
+/* 2. Ventanas que se pueden redimensionar (y abrazan la imagen) */
+.window.resizable {
+    resize: horizontal; /* EL TRUCO: Solo dejamos escalar a los lados */
+    overflow: hidden;
+    min-width: 300px;
+}
+
+/* 3. Aseguramos que el contenido respete la imagen */
+.window.resizable .window-body {
+    
+    display: block; 
+}
+
+.window.resizable img {
+    width: 100%; /* La imagen siempre llena el ancho de la ventana */
+    height: auto; /* La imagen ajusta su alto sola, manteniendo su proporción original */
+    display: block;
+    pointer-events: none;
+}
+
+.windows-container {
+    display: flex;
+    flex-wrap: wrap; /* Si no caben a lo ancho, pasan abajo */
+    gap: 250px 370px; /* Separación entre ventanas */
+    padding: 20px;
+    align-items: flex-start; /* Alineamos al inicio para que no se desordenen */
+}
