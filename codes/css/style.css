@@ -28,6 +28,43 @@
   z-index: 1000; /* Asegura que se muestre por encima de otros elementos */
 }
 
+#tp1 {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    right: 120px;
+    top: 47px;
+    color: rgb(117, 136, 244); /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de fuente */
+    z-index: 1001; /* Asegura que se muestre por encima de otros elementos */
+    cursor: auto;
+    user-select: none;
+}
+
+#tp1.active {
+    display: block;
+    cursor: pointer;
+}
+
+#tp2 {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    left: 90px;
+    bottom: 125px;
+    color: rgb(250, 185, 255); /* Color del texto */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 14px; /* Tamaño de fuente */
+    z-index: 1001; /* Asegura que se muestre por encima de otros elementos */
+    cursor: auto;
+    user-select: none;
+}
+
+#tp2.active {
+    display: block;
+}
+
 /* 1. Ventanas que se pueden arrastrar */
 .window.draggable {
     position: absolute;

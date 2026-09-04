@@ -8,35 +8,41 @@
 
     <link rel="icon" type="image/png" href="images/Silly/favicon.png" />
 
-    <link rel="stylesheet" href="codes/css/style.css">
+    
     <link rel="stylesheet" href="https://unpkg.com/7.css">
+    <link rel="stylesheet" href="codes/css/style.css">
+    <link rel="stylesheet" href="codes/css/aero.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="window glass active" style="width: 100%; height: 100%; --w7-w-bg: #805ba5;">
+    <div class="window glass active aero-fade-in" style="--fade-time: 3.5s; width: 100%; height: 100%; --w7-w-bg: #805ba5;">
         <div class="title-bar">
             <div class="title-bar-text">Thy Gisty At Your Service~</div>
                 <div class="title-bar-controls">
-                    <button aria-label="Help"></button>
+                    <button aria-label="Help" id="btn1"></button>
                     <button aria-label="Minimize" disabled=""></button>
                     <button aria-label="Maximize" disabled=""></button>
                     <button aria-label="Close"></button>
                 </div>
         </div>
-            
+    </div>
+    <div class="ContainerWindow1">
+        <div role="tooltip" class="is-bottom is-left" id="tp1">
+            Hi! I'm a Booth Style Avi Maker~ Click me to know more!</div>
+        </div>
     </div>
 
-    <div class="windows-container">
+    <div class="windows-container ">
 
     <div class="background">
-        <div class="window glass active draggable resizable">
+        <div class="window glass active draggable resizable aero-fade-in" style="--fade-time: 3.7s;">
             <div class="title-bar">
                 <div class="title-bar-text">Shinnyno!</div>
                 <div class="title-bar-controls">
                     <button aria-label="Minimize"></button>
-                    <button aria-label="Close"></button>
+                    <button aria-label="Close" disabled=""></button>
                 </div>
             </div>
 
@@ -47,12 +53,12 @@
     </div>
 
     <div class="background">
-        <div class="window glass active draggable resizable">
+        <div class="window glass active draggable resizable aero-fade-in" style="--fade-time: 3.9s;">
             <div class="title-bar">
                 <div class="title-bar-text">Spacily~</div>
                 <div class="title-bar-controls">
                     <button aria-label="Minimize"></button>
-                    <button aria-label="Close"></button>
+                    <button aria-label="Close" disabled=""></button>
                 </div>
             </div>
 
@@ -63,12 +69,12 @@
     </div>
 
     <div class="background">
-        <div class="window glass active draggable resizable">
+        <div class="window glass active draggable resizable aero-fade-in" style="--fade-time: 4.1s;">
             <div class="title-bar">
                 <div class="title-bar-text">MoeMoe!</div>
                 <div class="title-bar-controls">
                     <button aria-label="Minimize"></button>
-                    <button aria-label="Close"></button>
+                    <button aria-label="Close" disabled=""></button>
                 </div>
             </div>
 
@@ -78,14 +84,45 @@
         </div>
     </div>
 
+    <div class="background">
+        <div class="window glass active draggable resizable aero-fade-in" style="--fade-time: 4.3s;">
+            <div class="title-bar">
+                <div class="title-bar-text">info.txt</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize" disabled=""></button>
+                    <button aria-label="Close" class="btn-close" data-fade-time="0.7s"></button>
+                </div>
+            </div>
+
+            <div class="window-body has-space">
+                <p class ="fontable">This is still a work in progress! Check often for updates uwu</p>
+
+                <p class ="fontable">Windows can be moved, scaled and dragged around the screen! also check the ? icon~</p>
+
+                <p class ="fontable">Try closing this window too!</p>
+            </div>  
+            </div>  
+        </div>
+    </div>
+
 
     </div>
 
    
+    <section id="footer">
+        <section>
+            <div class="ContainerGif1">
+            <div role="tooltip" class="is-top is-right" id="tp2">
+            Wiwiwiwi</div>
+            </div>
+            <img id="capoo" src="images/silly/capoo.gif" alt="wiwiwi" onclick="">
+        </section>
 
-
-<img id="capoo" src="images/silly/capoo.gif" alt="wiwiwi">
-
-<script src="codes/js/main.js"></script>
+        <section>
+            <ul class="icons">
+            </ul>
+        </section>
+    </section>
+<script src="codes/js/windowmanager.js"></script>
 </body>
 </html>

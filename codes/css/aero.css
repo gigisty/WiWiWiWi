@@ -1,0 +1,22 @@
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9) }
+  to { opacity: 1; transform: scale(1) }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: scale(1) }
+  to { opacity: 0; transform: scale(0.9) }
+}
+
+/* Clases utilitarias */
+.aero-fade-in {
+    animation: fadeIn var(--fade-time, 2s) cubic-bezier(0.1, 0.9, 0.2, 1) forwards;
+}
+
+.aero-fade-out {
+    animation: fadeOut var(--fade-time, 0.5s) cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+.fontable {
+    font-family: 'Nunito', 'Segoe UI', sans-serif;
+}
